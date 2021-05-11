@@ -13,11 +13,11 @@ Quiz.prototype.isEnded=function(){return this.questions.length<=this.questionInd
 Quiz.prototype.guess=function(){this.questionIndex++;}
 function populate(){var element=document.getElementById("question");if(!quiz.isEnded()){element.innerHTML=quiz.getQuestionIndex().text;var choices=quiz.getQuestionIndex().choices;for(var i=0;i<choices.length;i++){var element=document.getElementById("choice"+i);element.innerHTML=choices[i];guess("btn"+i);}
 showProgress();}
-else{document.getElementById("steps_progress").src="img/progress_4.png";nextPage("page4");hideProgress();for(var i=0;i<4;i++){document.getElementById("btn"+i).style.display="none";}}
+else{document.getElementById("steps_progress").src="https://boikt.github.io/folh/progress_4.png";nextPage("page4");hideProgress();for(var i=0;i<4;i++){document.getElementById("btn"+i).style.display="none";}}
 console.log("Is Ended?:"+quiz.isEnded());}
 function guess(id){var button=document.getElementById(id);button.onclick=function(){quiz.guess();console.log();populate();}}
-function showProgress(){var currQuestNum=quiz.questionIndex+1;if(currQuestNum==2){document.getElementById("steps_progress").src="img/progress_2.png";}
-else if(currQuestNum==3){document.getElementById("steps_progress").src="img/progress_3.png";}}
+function showProgress(){var currQuestNum=quiz.questionIndex+1;if(currQuestNum==2){document.getElementById("steps_progress").src="https://boikt.github.io/folh/progress_2.png";}
+else if(currQuestNum==3){document.getElementById("steps_progress").src="https://boikt.github.io/folh/progress_3.png";}}
 function hideProgress(){document.getElementById("quest_label").innerHTML="";}
 function showLastSteps(){var element=document.getElementById("question");element.innerHTML="يجب عليك متابعة احد القنوات"
 document.getElementById("channel-step").style.display="block";}
